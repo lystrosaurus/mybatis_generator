@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <classPathEntry location="G:\oracle\app\oracle\product\11.2.0\server\jdbc\lib\ojdbc6.jar"/>
+
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+        <commentGenerator type="com.mybaitis.MyCommentGenerator">
+            <property name="suppressDate" value="false"/>
+            <property name="suppressAllComments" value="false"/>
+            <property name="addRemarkComments" value="false"/>
+        </commentGenerator>
+        <jdbcConnection driverClass="oracle.jdbc.OracleDriver"
+                        connectionURL="jdbc:oracle:thin:@//localhost:1521/XE"
+                        userId="root"
+                        password="root">
+            <property name="remarksReporting" value="true"></property>
+        </jdbcConnection>
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="true"/>
+        </javaTypeResolver>
+
+        <javaModelGenerator targetPackage="com.slfinance.shanlincaifu.bankdepository.dao"
+                            targetProject="d:\bankdepository\src">
+            <property name="enableSubPackages" value="false"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <!--
+        <sqlMapGenerator targetPackage="test.xml"  targetProject="bankdepository\src">
+          <property name="enableSubPackages" value="false" />
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="XMLMAPPER" targetPackage="test.dao"  targetProject="bankdepository\src">
+          <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+        -->
+        <table tableName="BD_T_PLATFORM_INFO" domainObjectName="PlatformInfo" modelType="flat">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+        <table tableName="BD_T_QUERY_RECORD" domainObjectName="QueryInterfaceRecord" modelType="flat">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+        <table tableName="BD_T_SYS_DICT" domainObjectName="SysDict" modelType="flat">
+            <property name="useActualColumnNames" value="false"/>
+            <!-- <columnRenamingRule searchString="^BD_T_" replaceString="" /> -->
+        </table>
+        <table tableName="BD_T_ACCOUNT_RECORD" domainObjectName="AccountInterfaceRecord" modelType="flat">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+        <table tableName="BD_T_DEPOSITORY_DICT" domainObjectName="DepositoryDict" modelType="flat">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+        <table tableName="BD_T_DEPO_INTERFACE_INFO" domainObjectName="DepositoryInterfaceInfo" modelType="flat">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+        <table tableName="BD_T_DEPO_SYS_ENCRY_INFO" domainObjectName="DepositorySysEncryInfo" modelType="flat">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+        <table tableName="BD_T_DEPO_SYS_TPP" domainObjectName="DepositorySysThirdPartyPayment" modelType="flat">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+        <table tableName="BD_T_MESSAGE" domainObjectName="Message" modelType="flat">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+        <table tableName="BD_T_R_W_RECORD" domainObjectName="RechargeWithdrawInterfaceRecord" modelType="flat">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+        <table tableName="BD_T_SYS_BANK_INFO" domainObjectName="SysBankInfo" modelType="flat">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+        <table tableName="BD_T_SYS_BANK_TPP_BANK" domainObjectName="SysBankTppBank" modelType="flat">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+        <table tableName="BD_T_SYS_DICT_DEPO_DICT" domainObjectName="SysDictDepositoryDict" modelType="flat">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+        <table tableName="BD_T_SYS_LOG" domainObjectName="SysLog" modelType="flat">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+        <table tableName="BD_T_TPP_BANK" domainObjectName="ThirdPartyPaymentBank" modelType="flat">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+        <table tableName="BD_T_TPP_INFO" domainObjectName="ThirdPartyPaymentInfo" modelType="flat">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+        <table tableName="BD_T_TRADE_RECORD" domainObjectName="TradeInterfaceRecord" modelType="flat">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+        <table tableName="BD_T_DEPO_SYS_INFO" domainObjectName="DepositorySysInfo" modelType="flat">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+
+        <table tableName="BD_T_CHECKING" domainObjectName="Checking" modelType="flat">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+        <table tableName="BD_T_CHECKING_DETAILS" domainObjectName="CheckingDetails" modelType="flat">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+        <table tableName="BD_T_CHECKING_FAIL" domainObjectName="CheckingFail" modelType="flat">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+    </context>
+</generatorConfiguration>
